@@ -1,0 +1,542 @@
+body{
+    background: #fadede;
+}
+
+.container{
+    width: 800px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.container-line{
+  width: 800px;
+  height: 400px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.container-camera{
+  width: 800px;
+  height: 400px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(75%,-50%);
+  z-index: 10;
+}
+
+h1{
+    font-family: 'Sacramento', cursive;
+    color: #FE7696;
+    font-size: 69px;
+}
+
+.letter{
+    width: 650px;
+    height: 400px;
+    display: inline-block;
+}
+
+.rose{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    right: 40;
+    display: inline-block;
+    animation: yidon 5s infinite;
+    transform: translateY(40%);
+}
+
+.petal{
+    width: 50px;
+    height: 50px;
+    background: #fe7696;
+    border-radius: 0px 50%;
+    position: absolute;
+    box-shadow: 0 0 10px #D1123F;
+    z-index: 2;
+    transform-origin: bottom right; 
+    animation: zhankai2 10s infinite;
+    
+}
+
+.petal:nth-child(2){
+    transform-origin: right bottom;
+    transform: rotate(90deg);
+    background: #fe7696;
+    left: -10px;
+    animation: zhankai1 10s infinite;
+}
+
+.petal:nth-child(3){
+    width: 40px;
+    height: 40px;
+    left: 10px;
+    top: -20px;
+    z-index: 1;
+    background: #f03a64;
+    transform-origin: bottom right; 
+    animation: zhankai2 10s infinite;
+}
+
+.petal:nth-child(4){
+    transform: rotate(90deg);
+    width: 40px;
+    height: 40px;
+    left: 0px;
+    top: -20px;
+    z-index: 1;
+    background: #f03a64;
+    transform-origin: bottom right; 
+    animation: zhankai1 10s infinite;
+}
+
+.petal:nth-child(5){
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    left: 20px;
+    top: -30px;
+    z-index: 0;
+    background: #d1123f;
+    
+}
+
+.leaf{
+    position: absolute;
+    top: 120px;
+    left: -115px;
+}
+
+.stem{
+    width: 240px;
+    height: 40px;
+    background: transparent;
+    border: 8px solid #8ac78a;
+    border-color: #77a377 transparent transparent transparent;
+    border-radius: 50% 50%;
+    transform: rotate(100deg);
+}
+
+.leafs{
+    width: 50px;
+    height: 40px;
+    border-radius: 0px 50%;
+    background: #77a377;
+    position: absolute;
+    top: 0;
+    left: 100px;
+    z-index: 49;
+}
+
+.leafs:nth-child(2){
+    width: 40px;
+    height: 20px;
+    top: 40px;
+    left: 140px;
+    transform: rotate(120deg);
+}
+
+@keyframes yidon{
+    50%{
+        transform: translateY(35%);
+    }
+    100%{
+        transform: translateY(40%);
+    }
+}
+
+@keyframes zhankai1{
+    50%{
+        transform: rotate(110deg);
+    }
+    100%{
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes zhankai2{
+    50%{
+        transform: rotate(-20deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+/* line*/
+svg #line {
+    fill: none;
+    stroke: #e00000;
+    stroke-width: 1.5;
+    stroke-linecap: butt;
+    stroke-linejoin: round;
+    stroke-miterlimit: 4;
+  
+    stroke-opacity: 1;
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    animation: dash 3s linear infinite;
+  }
+  svg #point {
+    fill: none;
+    stroke: #f00000;
+    stroke-width: 5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: .1;
+    stroke-opacity: 1;
+    stroke-dasharray: .0001, .9999;
+    stroke-dashoffset: 1;
+    animation: dash 3s linear infinite;
+  }
+  
+  @keyframes dash {
+    0% {
+      stroke-dashoffset: 1;
+    }
+    80% {
+      stroke-dashoffset: 0;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+
+/* camera*/
+.polaroid-camera {
+  position: relative;
+  margin-bottom: 25%;
+}
+
+.polaroid-camera:before, .polaroid-camera:after {
+  content:"";
+  position: absolute;
+  transform: translate(-50%,-50%);
+  left:0;
+  top:50%;
+  background-color: #ffccf9;
+  width:300px;
+}
+
+.polaroid-camera:before {
+  border-radius: 30px 30px 0 0;
+  box-shadow: inset 0 45px #fff6fd;
+  height:150px;
+}
+
+.polaroid-camera:after {
+  height:40px;
+  top:-10px;
+}
+
+button {
+  position: absolute;
+  width:50px;
+  height:20px;
+  transition: .2s;
+  border-radius: 10px 10px 0 0;
+  background-color: #ff77a8;
+  border: none;
+  top:-95px;
+  left:50px;
+  transform-origin: bottom;
+  cursor: pointer;
+  z-index:125;
+  animation: blink 2s infinite;
+}
+
+button:active {
+  transform: scaleY(.5);
+}
+
+.lens {
+  position: absolute;
+  border-radius:50%;
+  border: 5px solid #ff4d94;
+  background-color: white;
+  width:115px;
+  height:115px;
+  z-index:1;
+  transform: translate(-50%,-50%);
+  top:50%;
+  left:0;
+}
+
+.lens:before, .lens:after {
+  content:"";
+  position: absolute;
+  border-radius:50%;
+  transform: translate(-50%,-50%);
+  top:50%;
+  left:50%;
+}
+
+.lens:before {
+  border: 10px solid #ff99cc; /* Màu hồng sáng cho lens */
+  width: 90px;
+  height: 90px;
+  background-color: #ff77a8; /* Màu hồng nhạt hơn */
+}
+
+.lens:after {
+  border: 10px solid #ff4d94; /* Màu hồng đậm hơn */
+  width: 40px;
+  height: 40px;
+  background-color: #ff1a75; /* Màu hồng đậm */
+}
+
+.reflection, .reflection:before, .reflection:after {
+  position: absolute;
+  border-radius:50%;
+}
+
+.reflection {
+  background-color: rgba(255,255,255,.8);
+  width: 15px;
+  height:15px;
+  top:50px;
+  left:60px;
+  z-index:2;
+}
+
+.reflection:before {
+  content:"";
+  width:115px;
+  height:115px;
+  background-color: rgba(255,255,255,.1);
+  top:-50px;
+  left:-60px;
+}
+
+.reflection:after {
+  content:"";
+  width:20px;
+  height:20px;
+  background-color: rgba(255,255,255,.4);
+  top:35px;
+  left:-30px;
+  box-shadow: 40px -73px rgba(255,255,255,.4);
+}
+
+.flash {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #ff99cc; /* Màu hồng cho flash */
+  border-radius: 5px;
+  z-index: 4;
+  left: 85px;
+  top: -40px;
+}
+
+.flash:before, .flash:after {
+  content:"";
+  position: absolute;
+  border-radius:50%;
+  transform: translate(-50%,-50%);
+  top:50%;
+  left:50%;
+}
+
+.flash:before {
+  border: 5px solid #ff4d94; /* Màu hồng cho flash */
+  width: 20px;
+  height: 20px;
+  background-color: #ff77a8; /* Màu hồng nhạt hơn */
+}
+
+.flash:after {
+  background-color: #003554;
+  width:8px;
+  height:8px;
+  box-shadow: 8px -5px rgba(255,255,255,.3);
+}
+
+.stripes {
+  position: absolute;
+  width:14.5px;
+  height:20px;
+  background-color: #ffccf9;
+  top:55px;
+  /* box-shadow: -14.5px 0 #9f9b9b; */
+}
+
+.stripes:before, .stripes:after {
+  content:"";
+  position: absolute;
+  border-radius: 50%;
+}
+
+.stripes:before {
+  width: 30px;
+  height:30px;
+  background-color: #ffffff;
+  left:50px;
+  top:-20px;
+}
+
+.stripes:after {
+  border:5px solid #ba181b;
+  background-color: #a4161a;
+  left:-130px;
+  top:-40px;
+  width: 30px;
+  height: 30px;
+}
+
+.bottom {
+  position: absolute;
+  perspective: 250px;
+  z-index:10;
+}
+
+.bottom:before, .bottom:after {
+  content:"";
+  position: absolute;
+  height:30px;
+  transform: rotateX(45deg);
+  top:73px;
+}
+
+.bottom:before {
+  background-color: #ffb3e6;
+  width:314px;
+  left:-157px;
+}
+
+/* .bottom:after {
+  width: 15px;
+  background-color: #fbfbfb;
+  box-shadow: -15px 0 #d52121;
+} */
+
+.bottom-front {
+  position: absolute;
+  background-color: #e382db;
+  width:328px;
+  height:15px;
+  top:102px;
+  left:-164px;
+}
+
+.bottom-front:before {
+  content:"";
+  position: absolute;
+  width: 15.5px;
+  height: 15px;
+  left:164px;
+  /* background-color: #e02846;
+  box-shadow: -15.5px 0 #568760; */
+}
+
+.bottom-front:after {
+  content:"";
+  position: absolute;
+  width:328px;
+  height:50px;
+  border-radius:0 0 20px 20px;
+  background-color: #c91b8f;
+  top:15px;
+}
+
+.slot {
+  position: absolute;
+  background-color: #ff99cc;
+  width: 270px;
+  transform: translate(-50%,-50%);
+  border-radius: 10px 10px 0 0;
+  height:15px;
+  z-index:11;
+  top:159px;
+}
+
+.shadow {
+  position: absolute;
+  width: 400px;
+  text-indent: -120px;
+  height:70px;
+  background-color: rgba(132, 130, 130, 0.17);
+  border-radius:50%;
+  top:120px;
+  left:-200px;
+  z-index:-4;
+}
+
+.photo {
+  z-index:-1;
+  transform: translate(-50%,-50%);
+  top:50px;
+  left: 10px;
+  position: absolute;
+  border-style: solid;
+  border-color: rgb(242, 204, 229);
+  width:250px;
+  height: 160px;
+  border-top-width: 10px;
+  border-bottom-width: 10px;
+  border-left-width:10px;
+  border-right-width:10px;
+  background-image: url(https://media.giphy.com/media/Z21HJj2kz9uBG/giphy.gif?cid=ecf05e47xidu9fm2vipo4w250rt75hrllkq4mb08ra9iccvg&ep=v1_gifs_search&rid=giphy.gif&ct=g);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.photo:before, .photo:after {
+  content:"";
+  position: absolute;
+  border-radius: 50%;
+}
+
+
+@keyframes flash-animation {
+  0% {transform: scale(0);opacity:0;}
+  50% {transform: scale(2);opacity:1;z-index:200;}
+  100% {transform: scale(2);opacity:0;}
+}
+
+.flash-animation {
+  animation: flash-animation .2s ease;
+}
+
+#circle {
+  position: absolute;
+  background-color: rgba(251, 251, 251, 0.4);
+  width: 100px;
+  height:100px;
+  border-radius:100%;
+  z-index:5;
+  top:-70px;
+  left:55px;
+  opacity:0;
+}
+
+@keyframes eject-photo {
+  0% {transform: translateY(0);left:-95px;}
+  100% {transform: translateY(115px); left:-95px;}
+}
+
+.eject-photo {
+  animation: eject-photo .6s ease forwards .3s;
+  margin-left: -32px;
+}
+
+/* Hiệu ứng nhấp nháy */
+@keyframes blink {
+  0% { background-color: #ff77a8; } /* Màu ban đầu */
+  50% { background-color: #ffffff; } /* Màu trắng khi nhấp */
+  100% { background-color: #ff77a8; } /* Quay lại màu ban đầu */
+}
+
+button:active {
+  animation: blink 0.5s ease; /* Áp dụng hiệu ứng nhấp nháy */
+  transform: scaleY(0.9);
+}
+  
