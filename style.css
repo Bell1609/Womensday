@@ -9,6 +9,8 @@
     max-width: 410px;
     margin: 0 auto;
     padding: 10px;
+    position: relative;
+    top: -70px;
     box-sizing: border-box;
   }
 
@@ -17,7 +19,7 @@
     text-align: center;
   }
 
-  .rose, .rose .leaf, .rose .flower, .container-camera, .container-line {
+  .rose, .rose .leaf, .rose .flower, .container-camera {
     display: none;
   }
 
