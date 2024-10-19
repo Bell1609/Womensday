@@ -17,6 +17,14 @@
       display: none;
   }
 
+  .rose .leaf {
+      display: none;
+  }
+
+  .rose .flower {
+      display: none;
+  }
+
   .container-camera {
       display: none;
   }
