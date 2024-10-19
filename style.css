@@ -1,7 +1,6 @@
 @media only screen and (max-width: 600px) {
   html, body {
-    overflow-x: hidden; /* Ngăn cuộn sang trái và phải */
-    overflow-y: auto; /* Cho phép cuộn lên xuống */
+    overflow: hidden;
     margin: 0; 
   }
 
