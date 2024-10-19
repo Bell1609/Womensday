@@ -1,11 +1,15 @@
 @media only screen and (max-width: 600px) {
+  html, body {
+    overflow: hidden; 
+    margin: 0; 
+  }
 
   .letter {
-      width: 100%; 
-      max-width: 410px;
-      margin: 0 auto;
-      padding: 10px;
-      box-sizing: border-box;
+    width: 100%; 
+    max-width: 410px;
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
   }
 
   .letter h1 {
@@ -13,30 +17,13 @@
     text-align: center;
   }
 
-  .rose {
-      display: none;
-  }
-
-  .rose .leaf {
-      display: none;
-  }
-
-  .rose .flower {
-      display: none;
-  }
-
-  .container-camera {
-      display: none;
-  }
-
-  body {
-      overflow-x: hidden;
-      margin: 0;
+  .rose, .rose .leaf, .rose .flower, .container-camera {
+    display: none;
   }
 
   .container {
-      padding: 10px;
-      text-align: center;
+    padding: 10px;
+    text-align: center;
   }
 }
 
