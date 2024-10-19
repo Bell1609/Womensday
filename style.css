@@ -17,7 +17,7 @@
     text-align: center;
   }
 
-  .rose, .rose .leaf, .rose .flower, .container-camera {
+  .rose, .rose .leaf, .rose .flower, .container-camera, .container-line {
     display: none;
   }
 
