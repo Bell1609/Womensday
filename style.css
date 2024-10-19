@@ -1,3 +1,47 @@
+@media only screen and (max-width: 600px) {
+
+  .letter {
+      width: 100%; 
+      max-width: 450px;
+      margin: 0 auto;
+      padding: 10px;
+      box-sizing: border-box;
+  }
+
+  .letter h1 {
+    font-size: 60px;
+    text-align: center;
+  }
+
+  .rose {
+      width: 80px;
+      height: 160px;
+      margin: 20px auto;
+  }
+
+  .petal {
+      width: 40px;
+      height: 40px;
+  }
+
+  .container-camera {
+      display: none;
+  }
+
+  body {
+      overflow-x: hidden;
+      margin: 0;
+  }
+
+  .container {
+      padding: 10px;
+      text-align: center;
+  }
+}
+
+
+
+/*--------------*/
 body{
     background: #fadede;
 }
@@ -26,7 +70,7 @@ body{
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(75%,-50%);
+  transform: translate(70%,-50%);
   z-index: 10;
 }
 
